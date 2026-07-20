@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping improve Daymark.
+Thanks for helping improve Daily Text Colors.
 
 ## Development setup
 
@@ -25,6 +25,6 @@ The plugin is written in TypeScript and bundled to `main.js` with esbuild.
 When possible, include:
 
 - Obsidian version and platform.
-- Daymark version.
+- Daily Text Colors version.
 - Whether the issue happens in Live Preview, Reading view, or both.
 - A small Markdown example that reproduces the behavior.

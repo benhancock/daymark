@@ -250,7 +250,7 @@ export default class Daymark extends Plugin {
 		try {
 			await this.store.finishLegacyMigration();
 		} catch {
-			new Notice("Daymark could not migrate its annotation storage");
+			new Notice("Annotation storage could not be migrated");
 		}
 		this.registerVaultEvents();
 		const activeFile = this.app.workspace.getActiveFile();
@@ -311,7 +311,7 @@ export default class Daymark extends Plugin {
 	}
 
 	private showReconciliationFailure(path: string): void {
-		new Notice("Daymark paused for a note whose edits could not be reconciled");
+		new Notice("Annotations paused for a note whose edits could not be reconciled");
 		const activeFile = this.app.workspace.getActiveFile();
 		if (activeFile?.path !== path || this.openRecoveryDialogs.has(path)) {
 			return;

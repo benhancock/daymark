@@ -1,6 +1,6 @@
-# Daymark
+# Daily Text Colors
 
-Daymark colors additions made after a note’s creation day while keeping the Markdown source unchanged.
+Daily Text Colors highlights additions made after a note’s creation day while keeping the Markdown source unchanged.
 
 It is designed for chronological annotation: existing note text remains the baseline, and later additions become visually dated without adding inline markers to your files.
 
@@ -14,12 +14,12 @@ It is designed for chronological annotation: existing note text remains the base
 - Completed task strikethroughs can optionally be colored by the date the task was checked.
 - Annotation history is stored in per-note sidecars under `.daymark/notes/`.
 - A compact index beside the plugin bundle keeps startup fast; full note snapshots
-  are loaded only when Daymark needs to reconcile an outside edit.
+  are loaded only when Daily Text Colors needs to reconcile an outside edit.
 - Notes without annotations are not persisted, avoiding full-vault snapshot growth.
 
 ## Storage
 
-Daymark never modifies Markdown to add annotation markers. For every note with
+Daily Text Colors never modifies Markdown to add annotation markers. For every note with
 annotation history, it stores one JSON sidecar containing the last reconciled
 content snapshot and dated ranges. The sidecars use opaque filenames and keep the
 note path inside the JSON record, so renames can be tracked safely.
@@ -29,18 +29,18 @@ color notes without loading every sidecar at startup. If you sync a vault betwee
 devices, include the hidden `.daymark` folder as well as the normal Obsidian
 configuration folder.
 
-Daymark is local-only. It does not make network requests or send note contents to
+Daily Text Colors is local-only. It does not make network requests or send note contents to
 external services.
 
 ## Privacy and permissions
 
-Daymark reads and writes only local vault/plugin data needed for annotation
+Daily Text Colors reads and writes only local vault/plugin data needed for annotation
 history. It does not use the clipboard, dynamic code execution, analytics, or
 network requests.
 
 ## Color palette
 
-Daymark uses the open-source [Flexoki](https://stephango.com/flexoki) palette by Steph Ango. Light and dark themes have separate defaults, and both cycles begin with red.
+Daily Text Colors uses the open-source [Flexoki](https://stephango.com/flexoki) palette by Steph Ango. Light and dark themes have separate defaults, and both cycles begin with red.
 
 ## Commands
 
@@ -50,7 +50,7 @@ Daymark uses the open-source [Flexoki](https://stephango.com/flexoki) palette by
 
 ## Settings
 
-Open **Settings → Community plugins → Daymark** to:
+Open **Settings → Community plugins → Daily Text Colors** to:
 
 - Choose ordered or stable-random color selection
 - Edit separate light- and dark-mode colors for every cycle position
@@ -67,14 +67,14 @@ Open **Settings → Community plugins → Daymark** to:
 ## Manual install
 
 1. Download `main.js`, `manifest.json`, and `styles.css` from the latest GitHub release.
-2. Create a folder named `daymark` inside your vault’s `.obsidian/plugins/` folder.
+2. Create a folder named `daymark` — the plugin ID — inside your vault’s `.obsidian/plugins/` folder.
 3. Place those three files in `.obsidian/plugins/daymark/`.
 4. Reload Obsidian.
-5. Enable Daymark under **Settings → Community plugins**.
+5. Enable Daily Text Colors under **Settings → Community plugins**.
 
 ## Limitations
 
-- Outside edits cannot reveal their true historical date, so newly detected text is dated when Daymark reconciles the change.
+- Outside edits cannot reveal their true historical date, so newly detected text is dated when Daily Text Colors reconciles the change.
 - Already-checked tasks are not retroactively assigned a completion date.
 - Metadata sync depends on your vault and plugin-data sync configuration.
 - Color carries meaning, so use the day legend and timestamp tooltips when color alone is not enough.
